@@ -236,7 +236,7 @@ class Labelme2YOLO(object):
         
         if not os.path.exists(img_path):
             img = utils.img_b64_to_arr(json_data['imageData'])
-            PIL.Image.fromarray(img).save(img_path)
+            PIL.Image.fromarray(img,"RGB").save(img_path)
         
         return img_path
     
